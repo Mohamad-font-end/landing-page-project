@@ -1,0 +1,69 @@
+@use '../../../../scss/mixin/mixin.scss' as clamp-mixin;
+
+
+.BestTourOperator {
+    display: flex;
+    @include clamp-mixin.clamp-fluid(padding-top, 1rem, 14rem);
+
+
+    .Content {
+        @include clamp-mixin.clamp-fluid(padding-left, 0.5rem, 15rem);
+        @include clamp-mixin.clamp-fluid(padding-top, 1rem, 8rem);
+        @include clamp-mixin.clamp-fluid(padding-right, 2rem, 15rem);
+
+        .Subtitle {
+            @include clamp-mixin.clamp-fluid(font-size, 1.4rem, 1.4rem);
+            color: #FF7B29;
+        }
+
+        .Title {
+            @include clamp-mixin.clamp-fluid(font-size, 4rem, 6rem);
+            @include clamp-mixin.clamp-fluid(margin-top, 0.5rem, 1rem);
+        }
+
+        .Description {
+            @include clamp-mixin.clamp-fluid(font-size, 1.4rem, 1.6rem);
+            @include clamp-mixin.clamp-fluid(margin-top, 1rem, 2rem);
+            color: #676A6C;
+        }
+
+        .ImageWrapper {
+
+            .Image {}
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .BestTourOperator {
+        flex-direction: column;
+    }
+
+    .ImageWrapper {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+
+        .Image {
+            width: 85%;
+            border-radius: 10px;
+        }
+    }
+
+}
+
+@media (max-width: 375px) {
+
+
+
+
+    .Image {
+        width: 92%;
+        height: 29rem;
+        border-radius: 10px;
+    }
+
+
+}

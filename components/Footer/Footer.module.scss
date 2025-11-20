@@ -1,0 +1,68 @@
+@use '../../scss/mixin/mixin.scss' as clamp-mixin;
+
+
+.Footer {
+    @include clamp-mixin.clamp-fluid(margin-top, 5rem, 14rem);
+    @include clamp-mixin.clamp-fluid(padding-bottom, 1rem, 5rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .FooterWrapper {
+
+        @include clamp-mixin.clamp-fluid(gap, 1rem, 23.8rem);
+
+        display: flex;
+
+        .FooterColumn {
+            .FooterTitle {
+                @include clamp-mixin.clamp-fluid(font-size, 1.6rem, 1.6rem);
+                font-weight: 600
+            }
+
+            .FooterLinks {
+                @include clamp-mixin.clamp-fluid(gap, 1rem, 2rem);
+                @include clamp-mixin.clamp-fluid(margin-top, 1rem, 2.3rem);
+                display: flex;
+                flex-direction: column;
+                color: #676A6C;
+
+                .FooterLinkItem {
+
+                    .FooterLink {
+                        @include clamp-mixin.clamp-fluid(font-size, 1rem, 1.2rem);
+                        color: black;
+                        font-weight: 300;
+                    }
+                }
+
+            }
+
+            .FooterParagraph {
+                @include clamp-mixin.clamp-fluid(margin-top, 2rem, 2.3rem);
+                @include clamp-mixin.clamp-fluid(font-size, 1.4rem, 1.4rem);
+                font-weight: 100;
+                color: black;
+            }
+
+            .FooterEmail {
+                @include clamp-mixin.clamp-fluid(margin-top, 2rem, 2.3rem);
+                @include clamp-mixin.clamp-fluid(font-size, 1.6rem, 1.6rem);
+                color: #31C3E0;
+            }
+        }
+
+    }
+}
+
+@media (max-width: 768px) {
+    .Footer {
+        justify-content: flex-start;
+        padding-left: 10px;
+    }
+
+    .FooterWrapper {
+        justify-content: left;
+        flex-direction: column;
+    }
+}

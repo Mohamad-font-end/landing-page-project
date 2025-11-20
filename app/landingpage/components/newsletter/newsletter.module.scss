@@ -1,0 +1,84 @@
+@use '../../../../scss/mixin/mixin.scss' as clamp-mixin;
+
+.newsletter {
+    display: flex;
+    justify-content: center;
+    @include clamp-mixin.clamp-fluid(padding-top, 10rem, 14rem);
+
+
+    .NewsletterWrapper {
+        @include clamp-mixin.clamp-fluid(width, 100rem, 117rem);
+        @include clamp-mixin.clamp-fluid(height, 30rem, 34rem);
+        display: flex;
+        justify-content: center;
+
+        background-color: #E8C400;
+        border-radius: 20px;
+
+        .DecorLeft {
+            @include clamp-mixin.clamp-fluid(margin-right, 3rem, 12.8rem);
+            position: relative;
+
+            bottom: 30;
+        }
+
+        .Content {
+            @include clamp-mixin.clamp-fluid(margin-top, 5rem, 7rem);
+
+            .Title {
+                @include clamp-mixin.clamp-fluid(font-size, 2rem, 4rem);
+                color: white;
+            }
+
+            .Description {
+                @include clamp-mixin.clamp-fluid(font-size, 1.5rem, 1.6rem);
+                @include clamp-mixin.clamp-fluid(margin-top, 1rem, 1rem);
+                color: white;
+            }
+
+            .Form {
+                position: relative;
+
+                .Input {
+                    @include clamp-mixin.clamp-fluid(width, 40rem, 45rem);
+                    @include clamp-mixin.clamp-fluid(height, 4rem, 6rem);
+                    @include clamp-mixin.clamp-fluid(margin-top, 1rem, 4rem);
+                    @include clamp-mixin.clamp-fluid(font-size, 1.5rem, 1.6rem);
+                    @include clamp-mixin.clamp-fluid(padding-left, 1.5rem, 2.6rem);
+                    color: #B3B4B5;
+                    border: none;
+                    background-color: white;
+                    border-radius: 12px;
+
+                }
+
+                .Button {
+                    @include clamp-mixin.clamp-fluid(width, 4rem, 4rem);
+                    @include clamp-mixin.clamp-fluid(height, 4rem, 4rem);
+                    background-color: #F66F4D;
+                    border-radius: 8px;
+                    border: none;
+                    display: flex;
+                    position: absolute;
+                    top: 50;
+                    right: 40;
+
+                }
+            }
+        }
+
+        .DecorRight {
+            @include clamp-mixin.clamp-fluid(margin-left, 3rem, 12.8rem);
+            @include clamp-mixin.clamp-fluid(margin-top, 1rem, 21rem);
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+
+    .newsletter {
+        display: none;
+    }
+
+}

@@ -1,0 +1,23 @@
+
+
+
+
+/// Mixin: clamp-fluid
+/// الاستخدام: @include clamp-fluid(padding-right, 5rem, 7.4rem);
+/// $property → اسم الخاصية
+/// $min → الحد الأدنى
+/// $max → الحد الأقصى
+/// $minWidth → أصغر حجم شاشة
+/// $maxWidth → أكبر حجم شاشة
+@mixin clamp-fluid($property, $min, $max, $minWidth: 320px, $maxWidth: 1440px) {
+  $diff: $max - $min;
+
+
+  #{$property}: clamp(
+    #{$min},
+    calc(#{$min} + #{$diff} * ((100vw - #{$minWidth}) / (#{$maxWidth} - #{$minWidth}))),
+    #{$max}
+  );
+}
+
+

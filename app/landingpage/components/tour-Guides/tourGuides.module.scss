@@ -1,0 +1,69 @@
+@use '../../../../scss/mixin/mixin.scss' as clamp-mixin;
+
+
+
+
+.tourGuides {
+    @include clamp-mixin.clamp-fluid(padding-top, 5rem, 14rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+    .Title {
+        @include clamp-mixin.clamp-fluid(font-size, 2rem, 4rem);
+    }
+
+    .GuidesWrapper {
+        @include clamp-mixin.clamp-fluid(margin-top, 2rem, 6rem);
+        @include clamp-mixin.clamp-fluid(gap, 2rem, 3rem);
+        display: flex;
+
+        .GuideCard {
+            .GuideInfo {
+                display: flex;
+                justify-content: space-between;
+                @include clamp-mixin.clamp-fluid(margin-top, 1rem, 2rem);
+
+                .GuideText {
+                    .GuideName {
+                        @include clamp-mixin.clamp-fluid(font-size, 1.5rem, 2rem);
+                    }
+
+                    .GuideRole {
+                        @include clamp-mixin.clamp-fluid(font-size, 1.2rem, 1.4rem);
+                        @include clamp-mixin.clamp-fluid(margin-top, 0.4rem, 0.4rem);
+                        color: #676A6C;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .GuidesWrapper {
+    
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+
+}
+
+@media (max-width: 375px) {
+
+    .GuidesWrapper {
+    
+        align-items: center;
+        flex-direction: column;
+
+
+    }
+
+
+}

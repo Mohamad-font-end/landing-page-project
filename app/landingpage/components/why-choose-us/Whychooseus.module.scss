@@ -1,0 +1,72 @@
+@use '../../../../scss/mixin/mixin.scss' as clamp-mixin;
+
+
+.WhyChooseUs {
+    @include clamp-mixin.clamp-fluid(padding-top, 5rem, 14rem);
+    @include clamp-mixin.clamp-fluid(padding-left, 0rem, 18rem);
+    display: flex;
+
+    .ContentWrapper {
+        @include clamp-mixin.clamp-fluid(padding-top, 3rem, 1.9rem);
+        @include clamp-mixin.clamp-fluid(padding-left, -5rem, 13.5rem);
+
+        .Header {
+            @include clamp-mixin.clamp-fluid(padding-right, 2rem, 25rem);
+
+            .Title {
+                @include clamp-mixin.clamp-fluid(font-size, 2rem, 4rem);
+            }
+
+            .Description {
+                @include clamp-mixin.clamp-fluid(margin-top, 1.2rem, 1.5rem);
+                @include clamp-mixin.clamp-fluid(font-size, 1.4rem, 1.6rem);
+                color: #676A6C;
+            }
+        }
+
+        .ItemsWrapper {
+            @include clamp-mixin.clamp-fluid(margin-top, 2rem, 6rem);
+
+            .Item {
+
+                display: flex;
+                @include clamp-mixin.clamp-fluid(gap, 2rem, 3rem);
+                @include clamp-mixin.clamp-fluid(margin-top, 2rem, 5rem);
+
+
+
+                .ItemContent {
+                    @include clamp-mixin.clamp-fluid(padding-right, 0rem, 25rem);
+
+                    .ItemTitle {
+                        @include clamp-mixin.clamp-fluid(font-size, 1.6rem, 1.6rem);
+                    }
+
+                    .ItemDescription {
+                        @include clamp-mixin.clamp-fluid(font-size, 1.3rem, 1.6rem);
+                        @include clamp-mixin.clamp-fluid(margin-top, 0.6rem, 0.8rem);
+                        color: #676A6C;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+
+    .WhyChooseUs {
+
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .MainImage {
+        width: 92%;
+        height: 35rem;
+        display: none;
+    }
+
+
+}
