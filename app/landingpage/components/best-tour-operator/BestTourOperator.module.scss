@@ -8,8 +8,15 @@
 
     .Content {
         @include clamp-mixin.clamp-fluid(padding-left, 0.5rem, 15rem);
-        @include clamp-mixin.clamp-fluid(padding-top, 1rem, 8rem);
         @include clamp-mixin.clamp-fluid(padding-right, 2rem, 15rem);
+        @include clamp-mixin.clamp-fluid(padding-top, 1rem, 8rem);
+
+
+
+
+        @media (max-width: 1160px) and (min-width: 768px) {
+            @include clamp-mixin.clamp-fluid(padding-right, 1rem, 1rem);
+        }
 
         .Subtitle {
             @include clamp-mixin.clamp-fluid(font-size, 1.4rem, 1.4rem);
@@ -19,6 +26,11 @@
         .Title {
             @include clamp-mixin.clamp-fluid(font-size, 4rem, 6rem);
             @include clamp-mixin.clamp-fluid(margin-top, 0.5rem, 1rem);
+
+
+            @media (max-width: 1160px) and (min-width: 768px) {
+                @include clamp-mixin.clamp-fluid(font-size, 3rem, 6rem);
+            }
         }
 
         .Description {
@@ -27,9 +39,17 @@
             color: #676A6C;
         }
 
-        .ImageWrapper {
 
-            .Image {}
+    }
+
+    .ImageWrapper {}
+
+    .Image {
+        @media (max-width: 1160px) and (min-width: 768px) {
+
+            @include clamp-mixin.clamp-fluid(width, 21rem, 50rem);
+            @include clamp-mixin.clamp-fluid(height, 22rem, 40rem);
+
         }
     }
 }
@@ -54,14 +74,14 @@
 
 }
 
-@media (max-width: 375px) {
+@media (max-width: 425px) {
 
 
 
 
     .Image {
         width: 92%;
-        height: 29rem;
+        height: 30rem;
         border-radius: 10px;
     }
 

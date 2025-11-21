@@ -11,6 +11,10 @@
     align-items: center;
 
 
+    @media (max-width: 1160px) and (min-width: 768px) {}
+
+
+
     .Title {
         @include clamp-mixin.clamp-fluid(font-size, 2rem, 4rem);
     }
@@ -20,11 +24,29 @@
         @include clamp-mixin.clamp-fluid(gap, 2rem, 3rem);
         display: flex;
 
+        @media (max-width: 1160px) and (min-width: 768px) {
+            @include clamp-mixin.clamp-fluid(gap, 1rem, 2rem);
+        }
+
         .GuideCard {
+            .GuidePhotoWrapper {
+                .GuidePhoto {
+
+                    @media (max-width: 1160px) and (min-width: 768px) {
+                        @include clamp-mixin.clamp-fluid(width, 21rem, 30rem);
+                        @include clamp-mixin.clamp-fluid(height, 22rem, 25rem);
+                   
+                    }
+
+                }
+            }
+
             .GuideInfo {
                 display: flex;
                 justify-content: space-between;
                 @include clamp-mixin.clamp-fluid(margin-top, 1rem, 2rem);
+
+
 
                 .GuideText {
                     .GuideName {
@@ -45,7 +67,7 @@
 @media (max-width: 768px) {
 
     .GuidesWrapper {
-    
+
         align-items: center;
         flex-direction: column;
         width: 100%;
@@ -58,7 +80,7 @@
 @media (max-width: 375px) {
 
     .GuidesWrapper {
-    
+
         align-items: center;
         flex-direction: column;
 
