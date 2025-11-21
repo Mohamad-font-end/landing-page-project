@@ -51,6 +51,11 @@
             @include clamp-mixin.clamp-fluid(height, 22rem, 40rem);
 
         }
+
+
+        @media (max-width: 768px) {
+                @include clamp-mixin.clamp-fluid(height, 25rem, 65rem);
+        }
     }
 }
 
@@ -68,6 +73,7 @@
 
         .Image {
             width: 85%;
+      
             border-radius: 10px;
         }
     }
@@ -80,8 +86,9 @@
 
 
     .Image {
-        width: 92%;
-        height: 30rem;
+
+        @include clamp-mixin.clamp-fluid(width, 10rem, 50rem);
+        @include clamp-mixin.clamp-fluid(height, 22rem, 40rem);
         border-radius: 10px;
     }
 
